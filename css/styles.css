@@ -7,18 +7,16 @@ body {
 
 #mainContainer {
     display: flex;
-    flex: 1;
+    flex-direction: column;
 }
 
 .title {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 4em;
-    font-size: 36px;
-    opacity: 65%;
-    width: 50%;
+    padding-top: 1em;
+    font-size: 42px;
+    opacity: 75%;
 }
 
 :root {
@@ -26,19 +24,43 @@ body {
     --grid-rows: 1fr;
 }
 
-#gridContainer {
-    display: grid;
+#squareSelection {
+    display: flex;
     justify-content: center;
-    align-content: center;
-    /* grid-auto-rows: 1fr; */
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-columns), 1fr);
-    margin-top: 10em;
-    width: 30%;
+    align-items: center;
+    padding: 1em;
 }
 
+button {
+    font-size: 16px;
+    width: 120px;
+    height: 64px;
+    background-color: rgb(73, 70, 70);
+    color: white;
+    box-shadow: 1px 2px 10px rgb(68, 66, 66);
+}
+
+#gridSection{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 2em;
+}
+
+#gridContainer {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    max-width: 600px;
+    max-height: 600px;
+    /* box-shadow: 1px 2px 10px; */
+}
+
+
+
 .grid-item:hover {
-    background-color: black;
+    background-color: blue;
 }
 
 .grid-item {
@@ -46,4 +68,5 @@ body {
     border: 1px solid black;
     text-align: center;
     background-color: white;
+    grid-auto-rows: 1fr;
 }

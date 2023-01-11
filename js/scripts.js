@@ -11,4 +11,4 @@ function createRows(rows, columns) {
     };
 };
 
-createRows(16,16)
+createRows(16,16);
