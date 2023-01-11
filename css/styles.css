@@ -31,13 +31,10 @@ body {
     padding: 1em;
 }
 
-button {
-    font-size: 16px;
-    width: 120px;
-    height: 64px;
-    background-color: rgb(73, 70, 70);
-    color: white;
-    box-shadow: 1px 2px 10px rgb(68, 66, 66);
+#myRange {
+    -webkit-appearance: none;
+    width: 480px;
+    background: black;
 }
 
 #gridSection{
@@ -45,6 +42,7 @@ button {
     justify-content: center;
     align-content: center;
     padding: 2em;
+    margin-top: 2em;
 }
 
 #gridContainer {
@@ -52,11 +50,10 @@ button {
     grid-auto-rows: 1fr;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    max-width: 600px;
-    max-height: 600px;
-    /* box-shadow: 1px 2px 10px; */
+    width: 480px;
+    height: 480px;
+    box-shadow: 1px 2px 10px;
 }
-
 
 
 .grid-item:hover {
@@ -64,7 +61,6 @@ button {
 }
 
 .grid-item {
-    padding: 1em;
     border: 1px solid black;
     text-align: center;
     background-color: white;
