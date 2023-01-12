@@ -57,7 +57,7 @@ body {
 
 
 #sliderValueText {
-    padding-left: 1em;
+    font-size: 18px;
 }
 
 .grid-item:hover {
