@@ -1,6 +1,13 @@
 "use strict"
 
 const gridContainer = document.getElementById("gridContainer");
+let gridSlider = document.querySelector("#sliderRange");
+let sliderValue = document.querySelector("#value");
+sliderValue.textContent = gridSlider.value;
+
+gridSlider.addEventListener("input", (event) => {
+    sliderValue.textContent = event.target.value
+  });
 
 function createRows(rows, columns) {
     gridContainer.style.setProperty("--grid-rows", rows);
