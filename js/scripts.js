@@ -6,8 +6,8 @@ let sliderValue = document.querySelector("#value");
 sliderValue.textContent = gridSlider.value;
 let columnsAndRows = 16;
 
-gridSlider.addEventListener("input", (event) => {
-    return columnsAndRows = sliderValue.textContent = +event.target.value;
+gridSlider.addEventListener("input", (e) => {
+    return columnsAndRows = sliderValue.textContent = +e.target.value;
   });
 
 
