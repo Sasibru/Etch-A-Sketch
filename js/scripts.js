@@ -4,11 +4,13 @@ const gridContainer = document.getElementById("gridContainer");
 let gridSlider = document.querySelector("#sliderRange");
 let sliderValue = document.querySelector("#value");
 sliderValue.textContent = gridSlider.value;
+let newGridBtn = document.querySelector("#newGridBtn");
 let columnsAndRows = 16;
 
 gridSlider.addEventListener("input", (e) => {
-    return columnsAndRows = sliderValue.textContent = +e.target.value;
-  });
+    columnsAndRows = sliderValue.textContent = +e.target.value;
+    clearGrid();
+});
 
 
 function createGrid(rows, columns) {
@@ -20,4 +22,16 @@ function createGrid(rows, columns) {
     };
 };
 
-createGrid(columnsAndRows, columnsAndRows);
+
+function clearGrid(){
+    gridContainer.innerHTML = "";
+    changeGridSize();
+}
+
+function changeGridSize() {
+    createGrid(columnsAndRows, columnsAndRows);
+};
+
+window.onload = () => {
+    createGrid(columnsAndRows, columnsAndRows);
+};
