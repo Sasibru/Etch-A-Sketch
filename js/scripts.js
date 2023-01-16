@@ -12,7 +12,6 @@ gridSlider.addEventListener("input", (e) => {
     clearGrid();
 });
 
-
 function createGrid(rows, columns) {
     gridContainer.style.setProperty("--grid-rows", rows);
     gridContainer.style.setProperty("--grid-columns", columns);
@@ -22,15 +21,19 @@ function createGrid(rows, columns) {
     };
 };
 
-
 function clearGrid(){
     gridContainer.innerHTML = "";
     changeGridSize();
-}
+};
 
 function changeGridSize() {
     createGrid(columnsAndRows, columnsAndRows);
 };
+
+
+
+
+
 
 window.onload = () => {
     createGrid(columnsAndRows, columnsAndRows);

@@ -24,17 +24,14 @@ body {
     --grid-rows: 1fr;
 }
 
-#squareSelection {
+#colorSelection {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 1em;
 }
 
-#sliderRange {
-    width: 480px;
-    border-radius: 25px;
+button {
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 #gridSection{
@@ -42,7 +39,6 @@ body {
     justify-content: center;
     align-content: center;
     padding: 2em;
-    margin-top: 2em;
 }
 
 #gridContainer {
@@ -55,6 +51,18 @@ body {
     box-shadow: 1px 2px 10px;
 }
 
+#squareSelection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+#sliderRange {
+    width: 480px;
+    border-radius: 25px;
+}
 
 #sliderValueText {
     font-size: 18px;
