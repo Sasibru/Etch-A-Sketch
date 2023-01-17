@@ -6,10 +6,7 @@ const sliderValue = document.querySelector("#value");
 sliderValue.textContent = gridSlider.value;
 const uChooseColorBtn = document.getElementById("uChooseColorBtn");
 const colorWell = document.getElementById("colorWell");
-uChooseColorBtn.addEventListener("click", () => {
-    colorWell.classList.remove("hidden");
-    uChooseColorBtn.classList.add("hidden");
-});
+
 
 let columnsAndRows = 16;
 
@@ -38,5 +35,4 @@ function changeGridSize() {
 
 window.onload = () => {
     createGrid(columnsAndRows, columnsAndRows);
-    colorWell.classList.add("hidden");
 };
