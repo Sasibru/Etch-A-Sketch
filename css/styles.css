@@ -25,6 +25,7 @@ body {
 }
 
 
+
 #gridSection{
     display: flex;
     justify-content: center;
@@ -89,14 +90,44 @@ button {
     color: honeydew;
 }
 
-#uChooseColor {
+button:hover {
+    opacity: 85%;
+}
+
+button:active {
+    border: solid rgba(0, 132, 255, 0.5);
+}
+
+#defineColorSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#uChooseColorBtn {
         background: black;
 }
 
-#randomColor {
+
+
+input[type='color'] {
+    /* -webkit-appearance: none; */
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    /* border-radius: 100px; */
+  }
+  
+  input[type="color"]::-webkit-color-swatch {
+    border: none;border-radius:40px;
+  }
+
+#randomColorBtn {
     background: linear-gradient(15deg, rgba(255, 0, 0, 0.5), rgba(255, 166, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 128, 0, 0.5), hsla(240, 100%, 50%, 0.5), rgba(76, 0, 130, 0.5), rgba(238, 130, 238, 0.5), rgba(255, 0, 0, 0.5));
 }
 
-#greyScaleColor {
+#greyScaleColorBtn {
     background: linear-gradient(90deg, rgb(182, 182, 182), rgb(163, 163, 163), rgb(151, 151, 151), rgb(121, 121, 121), hsl(0, 0%, 40%), rgb(82, 82, 82), rgb(66, 66, 66), rgb(29, 29, 29));
 }
