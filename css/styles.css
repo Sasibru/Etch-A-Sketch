@@ -24,7 +24,25 @@ body {
     --grid-rows: 1fr;
 }
 
+button {
+    margin-left: 2em;
+    margin-right: 2em;
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: honeydew;
+}
 
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    border: solid rgba(0, 132, 255, 0.5);
+    opacity: 85%;
+}
 
 #gridSection{
     display: flex;
@@ -79,24 +97,6 @@ body {
     /* padding: 1em; */
 }
 
-button {
-    margin-left: 2em;
-    margin-right: 2em;
-    height: 40px;
-    width: 100px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 8px;
-    color: honeydew;
-}
-
-button:hover {
-    opacity: 85%;
-}
-
-button:active {
-    border: solid rgba(0, 132, 255, 0.5);
-}
 
 #defineColorSection {
     display: flex;
@@ -109,10 +109,13 @@ button:active {
         background: black;
 }
 
-
+.btn-invisible {
+    display: none;
+ }
 
 input[type='color'] {
     /* -webkit-appearance: none; */
+    position: absolute;
     width: 40px;
     height: 40px;
     border: none;
@@ -124,10 +127,16 @@ input[type='color'] {
     border: none;border-radius:40px;
   }
 
+#greyScaleColorBtn {
+    background: linear-gradient(90deg, rgb(200, 200, 200), rgb(180, 180, 180), rgb(140, 140, 140), rgb(120, 120, 120), rgb(100, 100, 100), rgb(80, 80, 80), rgb(40, 40, 40), rgb(20, 20, 20));
+}
+
 #randomColorBtn {
     background: linear-gradient(15deg, rgba(255, 0, 0, 0.5), rgba(255, 166, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 128, 0, 0.5), hsla(240, 100%, 50%, 0.5), rgba(76, 0, 130, 0.5), rgba(238, 130, 238, 0.5), rgba(255, 0, 0, 0.5));
 }
 
-#greyScaleColorBtn {
-    background: linear-gradient(90deg, rgb(182, 182, 182), rgb(163, 163, 163), rgb(151, 151, 151), rgb(121, 121, 121), hsl(0, 0%, 40%), rgb(82, 82, 82), rgb(66, 66, 66), rgb(29, 29, 29));
+
+#eraserBtn {
+    background: white;
+    color: black;
 }
