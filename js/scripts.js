@@ -9,16 +9,13 @@ const randomColorBtn = document.getElementById("randomColorBtn");
 const greyScaleColorBtn = document.getElementById("greyScaleColorBtn");
 const colorWell = document.getElementById("colorWell");
 let colorWellValue = "#ff0000";
+const eraserValue = "#ffffff";
 let columnsAndRows = 16;
 let mouseClick = false;
 let activeMode = "uChooseColor";
-document.body.onmousedown = () => (mouseClick = true)
-document.body.onmouseup = () => (mouseClick = false)
 
-function currentMode(newMode) {
-    chosenMode(newMode);
-    activeMode = newMode;
-}
+document.body.onmousedown = () => (mouseClick = true);
+document.body.onmouseup = () => (mouseClick = false);
 
 uChooseColorBtn.onclick = () => currentMode("uChooseColor");
 greyScaleColorBtn.onclick = () => currentMode("greyScaleColor");
@@ -30,12 +27,19 @@ gridSlider.addEventListener("input", (e) => {
     clearGrid();
 });
 
+function currentMode(newMode) {
+    chosenMode(newMode);
+    activeMode = newMode;
+};
+
 function createGrid(rows, columns) {
     gridContainer.style.setProperty("--grid-rows", rows);
     gridContainer.style.setProperty("--grid-columns", columns);
     for(let i = 0; i < (rows * columns); i++) {
         let cell = document.createElement("div");
         gridContainer.appendChild(cell).className = "grid-item";
+        cell.addEventListener("mouseover", chosenMode)
+        cell.addEventListener("mousedown", chosenMode)
     };
 };
 
@@ -54,12 +58,24 @@ document.querySelector('button.opener')
 
 );
 
-colorWell.onchange = e => {
+colorWell.onchange = (e) => {
     colorWellValue = e.target.value;
 };
 
 
-function chosenMode(newMode) {
+function chosenMode(e) {
+    if(e.type === "mouseover" && !mouseClick) return
+
+    if(activeMode === "uChooseColor"){
+        e.target.style.backgroundColor = colorWellValue;
+
+    }else if(activeMode === "greyScaleColor") {
+
+    }else if(activeMode === "randomColor") {
+
+    }else if(activeMode === "eraser") {
+        e.target.style.backgroundColor = eraserValue;
+    }
 
 };
 

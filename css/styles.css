@@ -68,10 +68,11 @@ button:active {
     justify-content: center;
     align-items: center;
     padding: 1em;
+    padding-bottom: 0;
 }
 
 .grid-item:hover {
-    background-color: blue;
+    background-color: red;
 }
 
 .grid-item {
