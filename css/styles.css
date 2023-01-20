@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(58, 115, 221, 0.6);
+    background-color: rgba(92, 140, 230, 0.7);
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -36,12 +36,14 @@ button {
 }
 
 button:hover {
-    transform: scale(1.1);
+    opacity: 85%;
 }
 
-button:active {
-    border: solid rgba(0, 132, 255, 0.5);
-    opacity: 85%;
+
+.active {
+    border: solid rgb(133, 136, 108);
+    box-shadow: 3px 4px #585858;
+    transform: scale(1.2);
 }
 
 #gridSection{
@@ -71,15 +73,15 @@ button:active {
     padding-bottom: 0;
 }
 
-.grid-item:hover {
-    background-color: red;
-}
 
 .grid-item {
-    border: 1px solid black;
     text-align: center;
     background-color: white;
     grid-auto-rows: 1fr;
+}
+
+.grid-item:hover{
+    border: 1px solid black;
 }
 
 #sliderRange {
@@ -89,13 +91,14 @@ button:active {
 
 #sliderValueText {
     font-size: 18px;
+    font-weight: bold;
+
 }
 
 
 #colorSelection {
     display: flex;
     justify-content: center;
-    /* padding: 1em; */
 }
 
 
@@ -128,16 +131,16 @@ input[type='color'] {
     border: none;border-radius:40px;
   }
 
-#greyScaleColorBtn {
-    background: linear-gradient(90deg, rgb(200, 200, 200), rgb(180, 180, 180), rgb(140, 140, 140), rgb(120, 120, 120), rgb(100, 100, 100), rgb(80, 80, 80), rgb(40, 40, 40), rgb(20, 20, 20));
+#clearBtn {
+    background: white;
+    color: black;
 }
 
 #randomColorBtn {
-    background: linear-gradient(15deg, rgba(255, 0, 0, 0.5), rgba(255, 166, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 128, 0, 0.5), hsla(240, 100%, 50%, 0.5), rgba(76, 0, 130, 0.5), rgba(238, 130, 238, 0.5), rgba(255, 0, 0, 0.5));
+    background: linear-gradient(15deg, rgba(255, 0, 0, 0.7), rgba(255, 166, 0, 0.7), rgba(255, 255, 0, 0.3), rgba(0, 128, 0, 0.7), hsla(240, 100%, 50%, 0.7), rgba(76, 0, 130, 0.7), rgba(238, 130, 238, 0.7), rgba(255, 0, 0, 0.7));
 }
 
 
 #eraserBtn {
-    background: white;
-    color: black;
+    background: linear-gradient(90deg, rgb(220, 220, 220), rgb(200, 200, 200), rgb(160, 160, 160), rgb(140, 140, 140), rgb(100, 100, 100), rgb(80, 80, 80), rgb(40, 40, 40), rgb(20, 20, 20));
 }
