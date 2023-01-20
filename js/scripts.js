@@ -2,7 +2,6 @@
 
 const gridContainer = document.getElementById("gridContainer");
 const gridSlider = document.querySelector("#sliderRange");
-// const sliderValue = document.querySelector("#value");
 const sliderValueText = document.querySelector("#sliderValueText");
 const uChooseColorBtn = document.getElementById("uChooseColorBtn");
 const randomColorBtn = document.getElementById("randomColorBtn");
